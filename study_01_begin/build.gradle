@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group 'com.oneclubs'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+
+    implementation platform('io.projectreactor:reactor-bom:2020.0.15')
+    implementation 'io.projectreactor:reactor-core'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+}
+
+test {
+    useJUnitPlatform()
+}
